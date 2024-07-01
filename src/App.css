@@ -192,7 +192,7 @@ background-position: 50%;
   background: #3f3f3f77;
   padding: 10px 10px;
   border-radius: 5px;
-  backdrop-filter: blur(.5px);
+
   filter: drop-shadow(#000 5px 5px 10px);
 }
 
