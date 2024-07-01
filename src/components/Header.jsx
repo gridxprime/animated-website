@@ -5,6 +5,7 @@ function Header() {
 
     const [openNav, setOpenNav] = useState(false)
 
+
     const toggleButton = () => {
         setOpenNav(true)
     }
@@ -13,6 +14,8 @@ function Header() {
         setOpenNav(false)
     }
     
+
+
   return (
     <header>
         <img src={headerImg} alt="" />
@@ -24,7 +27,7 @@ function Header() {
             <li>About</li>
             <button onClick={closeButton} className='close__button'>X</button>
         </ul>
-        <button onClick={toggleButton} className='burger__button'>
+        <button style={{visibility: openNav ? 'hidden' : 'visible'}} onClick={toggleButton} className='burger__button'>
             <span></span>
             <span></span>
             <span></span>
