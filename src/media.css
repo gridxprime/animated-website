@@ -1,4 +1,9 @@
 @media all and (max-width: 500px) {
+
+body{
+    overflow-x: hidden;
+}
+
     header .ul__nav{
         position: fixed;
         left: -100%;

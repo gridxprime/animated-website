@@ -4,7 +4,7 @@ import './media.css'
 import Header from './components/Header'
 import gsap from 'gsap'
 import  ScrollTrigger  from 'gsap/ScrollTrigger'
-
+import dedsec from './assets/img/logo1.jpg'
 
 function App() {
 
@@ -17,36 +17,54 @@ function App() {
 
 const box1 = useRef(null)
 const box2 = useRef(null)
-
-const start = useRef(null)
+const box3 = useRef(null)
 
 gsap.registerPlugin(ScrollTrigger)
 
-
-const toggle = () => {
-
+useEffect(() => {
   gsap.fromTo(
     box1.current,
-    { x: 0, rotation: 0, borderRadius: '8px', fontSize: '1.5rem' },
-    { x: '50vw', rotation: 720, borderRadius: '500px', fontSize: '10px', duration: 2 }
+    { opacity: 0, x: 0, rotation: 0 },
+    {
+      opacity: 1, x: '50vw', borderRadius: '50%', rotation: 720,
+      scrollTrigger: {
+        trigger: '.start', 
+        start: 'top bottom', 
+        end: 'bottom center',
+        scrub: true
+      }
+    }
   );
 
+  gsap.fromTo(
+    box3.current,
+    { opacity: 0, x: 0, rotation: 0 },
+    {
+      opacity: 1, x: '50vw', borderRadius: '50%', rotation: 720,
+      scrollTrigger: {
+        trigger: '.start', 
+        start: 'top bottom', 
+        end: 'bottom center',
+       
+        scrub: true
+      }
+    }
+  );
 
   gsap.fromTo(
     box2.current,
-    { x: 0, rotation: 0, borderRadius: '8px', fontSize: '1.5rem' },
-    { x: '50vw', delay: 1, rotation: 360, borderRadius: '500px', fontSize: '10px', duration: 2 }
+    { opacity: 0, x: 0, rotation: 60 },
+    {
+      opacity: 1, x: '30vw', borderRadius: '50%', rotation: 480,
+      scrollTrigger: {
+        trigger: '.start', 
+        start: 'top bottom', 
+        end: 'bottom center',
+        scrub: true
+      }
+    }
   );
-};
-
-
-
-
-
-
-
-
-
+}, []);
 
 useEffect(() => {
   gsap.fromTo(sectionTitle.current, {
@@ -84,6 +102,33 @@ useEffect(() => {
 ) ,[]
 } )
 
+
+const btnCubes = () => {
+
+
+
+  gsap.fromTo('.cube1', {
+    x: '-300%', delay: .3, rotation: -90
+  }, {
+    x: 0, ease: 'bounce.inOut', duration: 2, rotation: 0
+  })
+
+
+  gsap.fromTo('.cube2', {
+    x: '200%', delay: .2, rotation: 0
+  }, {
+    x: 0, ease: 'bounce.in', duration: 1, rotation: 0
+  })
+
+
+  gsap.fromTo('.cube3', {
+    x: '100%', delay: .5, rotation: 360
+  }, {
+    x: 0, ease: 'bounce.out', duration: 2, rotation: 0
+  }) , []
+  
+}
+
   return (
     <>
     <Header></Header>
@@ -97,12 +142,22 @@ useEffect(() => {
                interactive elements.</span>
                <span ref={heroBottomSpan}>Made via GreenSock Animation Platform</span>
       </section>
-      <section ref={start} className='start'>
+      <section className='start'>
         <div  className="boxes">
-          <div ref={box1}  className="box1"><span>Cube goes to circle</span></div>
-          <div ref={box2} className="box2">Cube goes to circle</div>
-          <button onClick={toggle}>Roll Cubes</button>
+          <span>Using ScrollTrigger to make these perfect moves!</span>
+          <div ref={box1}  className="box1"><img src={dedsec} alt="" /></div>
+          <div ref={box2} className="box2"><img src={dedsec} alt="" /></div>
+          <div ref={box3} className="box2"><img src={dedsec} alt="" /></div>
+    
         </div>
+      </section>
+      <section className='btn__section'>
+              <div className="btn__cubes">
+                <div className="cube1 btn__cube"><span>Unlock the mysteries of tomorrow, one cube at a time.</span></div>
+                <div className="cube2 btn__cube"><span>Navigate through the cosmos of creativity and innovation.</span></div>
+                <div className="cube3 btn__cube"><span>Forge ahead with courage, for greatness awaits beyond the cube.</span></div>
+              </div>
+          <button onClick={btnCubes} className='btn__section-btn'>Tap</button>
       </section>
     </>
   )
