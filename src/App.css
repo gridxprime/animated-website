@@ -52,7 +52,7 @@ section{
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background: url('https://initiate.alphacoders.com/images/136/cropped-1920-1080-1363777.jpg?1659');
+  background: url('/src/assets/img/hero/herobg.jpg');
 line-height: 1.5;
 background-size: cover;
 background-position: 50%;
