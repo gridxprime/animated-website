@@ -113,16 +113,37 @@ background-position: 50%;
   background: url('./assets/img/bg2.jpg');
   background-size: cover;
   background-position: 35%;
+
 }
 
 .boxes{
   display: flex;
   flex-direction: column;
   gap: 10vh;
+
+}
+
+.boxes button{
+  display: inline;
+  padding: 10px;
+  min-width: 150px;
+  background: none;
+  outline: 1px solid #fff;
+  border: none;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 3px;
+  backdrop-filter: blur(10px);
 }
 
 .box1 ,.box2{
-  width: 10vw;
+  width: 20vw;
   aspect-ratio: 1/1;
-  background: #000;
+  background: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  outline: 1px solid #fff;
 }

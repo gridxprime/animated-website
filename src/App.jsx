@@ -20,7 +20,24 @@ const box2 = useRef(null)
 
 const start = useRef(null)
 
+gsap.registerPlugin(ScrollTrigger)
 
+
+const toggle = () => {
+
+  gsap.fromTo(
+    box1.current,
+    { x: 0, rotation: 0, borderRadius: '8px', fontSize: '1.5rem' },
+    { x: '50vw', rotation: 720, borderRadius: '500px', fontSize: '10px', duration: 2 }
+  );
+
+
+  gsap.fromTo(
+    box2.current,
+    { x: 0, rotation: 0, borderRadius: '8px', fontSize: '1.5rem' },
+    { x: '50vw', delay: 1, rotation: 360, borderRadius: '500px', fontSize: '10px', duration: 2 }
+  );
+};
 
 
 
@@ -82,8 +99,9 @@ useEffect(() => {
       </section>
       <section ref={start} className='start'>
         <div  className="boxes">
-          <div ref={box1}  className="box1"></div>
-          <div ref={box2} className="box2"></div>
+          <div ref={box1}  className="box1"><span>Cube goes to circle</span></div>
+          <div ref={box2} className="box2">Cube goes to circle</div>
+          <button onClick={toggle}>Roll Cubes</button>
         </div>
       </section>
     </>
