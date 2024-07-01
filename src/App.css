@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background: #1f1f1f;
+  background-size: cover;
+  font-family: Montserrat;
+  font-size: clamp(20px, 5vw, 30px);
+  color: #fff;
+}
+
+
+header{
+  width: 100%;
+  backdrop-filter: blur(10px);
+  padding: 20px 30px;
+  position: fixed;
+  border-bottom: 1px solid #fff;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+}
+
+header .ul__nav{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 30px;
+}
+
+header img{
+
+  height: 40px;
+}
+
+section{
+  padding: 20px 40px;
+  min-height: 100vh;
+}
+
+.hero{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: url('https://initiate.alphacoders.com/images/136/cropped-1920-1080-1363777.jpg?1659');
+line-height: 1.5;
+background-size: cover;
+background-position: 50%;
+}
+
+
+.burger__button{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 3px;
+}
+
+
+.burger__button span{
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+
+.close__button{
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  background: #fff;
+  padding: 7px;
+  border: none;
+  outline: none;
+}
