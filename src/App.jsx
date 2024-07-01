@@ -204,6 +204,16 @@ useEffect(() => {
               
         </div>
       </section>
+      <footer>
+        <div className="footer__top">
+          <span>Aibek Everon</span>
+          <span>GitHub</span>
+          <span>Telegram</span>
+          </div>
+        <div className="footer__bottom">
+          <span>2024</span>
+        </div>
+      </footer>
     </>
   )
 }
