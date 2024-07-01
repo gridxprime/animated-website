@@ -166,6 +166,7 @@ background-position: 50%;
   background: url('./assets/img/bg3.jpg');
   background-size: cover;
   background-position: 25%;
+  overflow-x: hidden;
 }
 
 
@@ -191,6 +192,7 @@ background-position: 50%;
   background: #3f3f3f77;
   padding: 10px 10px;
   border-radius: 5px;
+
 }
 
 .cube1 {
