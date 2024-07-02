@@ -1,14 +1,16 @@
 import React from 'react'
 import Header from '../components/Header'
 import './style.css'
+import Footer from '../components/Footer'
 function Links() {
   return (
     <>      
     <Header></Header>
             <section className='pages__page'>
       
-            <div>Links</div>
+            <span>Links</span>
         </section>
+        <Footer></Footer>
     </>
   )
 }

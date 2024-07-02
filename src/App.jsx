@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import './App.css'
 import './media.css'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import gsap from 'gsap'
 import  ScrollTrigger  from 'gsap/ScrollTrigger'
 import dedsec from './assets/img/logo1.jpg'
@@ -207,16 +208,9 @@ useEffect(() => {
               
         </div>
       </section>
-      <footer>
-        <div className="footer__top">
-         <span>Aibek Everon</span>
-          <a href="https://www.github.com/gridxprime"> <span>GitHub</span></a>
-          <a href="https://www.t.me/till_morning_comes"><span>Telegram</span></a>
-          </div>
-        <div className="footer__bottom">
-          <span>2024</span>
-        </div>
-      </footer>
+
+      <Footer></Footer>
+
 
     </>
 
