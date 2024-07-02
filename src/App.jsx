@@ -10,6 +10,9 @@ import infCube1 from './assets/img/inf/infcub1.jpg'
 import infCube2 from './assets/img/inf/infcub2.webp'
 import infCube3 from './assets/img/inf/infcub3.jpg'
 
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+
 function App() {
 
   const sectionTitle = useRef(null)
@@ -206,15 +209,17 @@ useEffect(() => {
       </section>
       <footer>
         <div className="footer__top">
-          <span>Aibek Everon</span>
-          <span>GitHub</span>
-          <span>Telegram</span>
+         <span>Aibek Everon</span>
+          <a href="https://www.github.com/gridxprime"> <span>GitHub</span></a>
+          <a href="https://www.t.me/till_morning_comes"><span>Telegram</span></a>
           </div>
         <div className="footer__bottom">
           <span>2024</span>
         </div>
       </footer>
+
     </>
+
   )
 }
 

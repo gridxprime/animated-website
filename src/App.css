@@ -166,7 +166,7 @@ background-position: 50%;
   background: url('./assets/img/bg3.jpg');
   background-size: cover;
   background-position: 25%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 
@@ -261,6 +261,11 @@ footer{
   padding: 20px 5vw;
   background: #000;
   gap: 5vh;
+}
+
+footer a{
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer__top, .footer__bottom{
