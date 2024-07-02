@@ -259,8 +259,11 @@ footer{
   flex-direction: column;
   min-height: 10vh;
   padding: 20px 5vw;
-  background: #000;
+  background: url('./pages/bg/footer.jpg');
+  background-position: 30% 20%;
   gap: 5vh;
+  box-shadow: inset #000 -10px -10px 10px,
+              inset #000 10px 10px 10px ;
 }
 
 footer a{
@@ -276,3 +279,6 @@ footer a{
 .footer__bottom{
   justify-content: center;
 }
+
+
+

@@ -29,6 +29,8 @@ const box3 = useRef(null)
 
 gsap.registerPlugin(ScrollTrigger)
 
+useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [])
+
 useEffect(() => {
   gsap.fromTo(
     box1.current,
