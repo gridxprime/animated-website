@@ -1,3 +1,10 @@
+@media (max-width: 1100px) {
+    .hero__bottom{
+        display: none;
+    }
+}
+
+
 @media all and (max-width: 500px) {
 
 body{

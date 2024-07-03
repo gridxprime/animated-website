@@ -111,6 +111,22 @@ useEffect(() => {
   }
 ) ,[]
 } )
+useEffect(() => {
+  gsap.fromTo('.inner__title-two', {
+    opacity: 0, y: -50
+  }, {
+    opacity: 1, y: 0,  delay: 2
+  }
+) ,[]
+} )
+useEffect(() => {
+  gsap.fromTo('.inner__title-three', {
+    opacity: 0, y: -50
+  }, {
+    opacity: 1, y: 0,  delay: 2.3
+  }
+) ,[]
+} )
 
 
 const btnCubes = () => {
@@ -180,7 +196,18 @@ useEffect(() => {
              <span ref={innerSpanTwo}>Dive into dynamic animations that bring content to life, 
               from sleek transitions to
                interactive elements.</span>
-               <span ref={heroBottomSpan}>Made via GreenSock Animation Platform</span>
+               <span ref={heroBottomSpan}><i><b>Made via GreenSock Animation Platform</b></i></span>
+               <div className="hero__bottom">
+               <span className='inner__title-two'>Experience the synergy of design and functionality as our animations guide you 
+                                                  through an intuitive and engaging interface. Every element is crafted to enhance 
+                                                  user interaction, making the journey through our site not just a visit, but an adventure.</span>
+               <span className='inner__title-three'>
+               From concept to execution, our team leverages the power of GreenSock to deliver 
+  animations that are not only visually stunning but also performance-optimized, 
+  ensuring a smooth and delightful experience across all devices.
+
+               </span>
+               </div>
       </section>
       <section className='start'>
         <div  className="boxes">

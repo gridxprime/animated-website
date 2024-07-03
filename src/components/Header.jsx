@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import headerImg from '../assets/icon.svg'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useEffect } from 'react'
-
+import '../App.css'
 
 
 function Header() {
@@ -22,13 +22,13 @@ function Header() {
 
   return (
     <header>
-        <Link to='/'><img src={headerImg} alt="" /></Link>
+        <NavLink to='/'><img src={headerImg} alt="" /></NavLink>
         <ul style={{left: openNav ? '0' : '-100%'}} className='ul__nav burger'>
 
-            <Link style={{textDecoration: 'none', color: 'inherit'}} to='/'><li>Main</li></Link>
-            <Link style={{textDecoration: 'none', color: 'inherit'}} to='/links'><li>Links</li></Link> 
-            <Link style={{textDecoration: 'none', color: 'inherit'}} to='/contacts'><li>Contacts</li></Link>
-            <Link style={{textDecoration: 'none', color: 'inherit'}} to='/about'> <li>About</li></Link>
+            <NavLink style={{textDecoration: 'none'}} to='/'><li>Main</li></NavLink>
+            <NavLink style={{textDecoration: 'none'}} to='/links'><li>Links</li></NavLink> 
+            <NavLink style={{textDecoration: 'none'}} to='/contacts'><li>Contacts</li></NavLink>
+            <NavLink style={{textDecoration: 'none'}} to='/about'> <li>About</li></NavLink>
 
             <button onClick={closeButton} className='close__button'>X</button>
         </ul>
