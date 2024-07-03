@@ -35,7 +35,8 @@ button{
 }
 
 .active{
-  color: #00aeff;
+  color: #fff;
+  text-decoration: underline 3px;
 }
 
 
@@ -51,7 +52,8 @@ header{
 }
 
 header a{
-  color: #fff;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 header .ul__nav{

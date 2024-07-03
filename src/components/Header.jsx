@@ -25,10 +25,10 @@ function Header() {
         <NavLink to='/'><img src={headerImg} alt="" /></NavLink>
         <ul style={{left: openNav ? '0' : '-100%'}} className='ul__nav burger'>
 
-            <NavLink style={{textDecoration: 'none'}} to='/'><li>Main</li></NavLink>
-            <NavLink style={{textDecoration: 'none'}} to='/links'><li>Links</li></NavLink> 
-            <NavLink style={{textDecoration: 'none'}} to='/contacts'><li>Contacts</li></NavLink>
-            <NavLink style={{textDecoration: 'none'}} to='/about'> <li>About</li></NavLink>
+            <NavLink style={{}} to='/'><li>Main</li></NavLink>
+            <NavLink style={{}} to='/links'><li>Links</li></NavLink> 
+            <NavLink style={{}} to='/contacts'><li>Contacts</li></NavLink>
+            <NavLink style={{}} to='/about'> <li>About</li></NavLink>
 
             <button onClick={closeButton} className='close__button'>X</button>
         </ul>
